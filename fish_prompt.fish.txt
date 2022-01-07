@@ -1,0 +1,25 @@
+
+function fish_prompt
+    set_color red
+    printf '%s ' $USER
+
+    set_color normal
+    printf '('
+
+    set_color blue
+    echo -n (prompt_hostname)
+
+    set_color normal
+    printf ')'
+
+    set_color normal
+    printf ' in '
+
+    set_color $fish_color_cwd
+    printf '%s' (prompt_pwd)
+    #new line
+    printf '\n'
+    set_color cyan
+    printf ' -> '
+
+end

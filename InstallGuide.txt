@@ -1,0 +1,84 @@
+Partitoning:
+    Create:
+
+    512Mb , flag boot/efi partition and make it is a seperate from Windows Boot MGMR to avoid corruption of the partiton.
+    root , flag / and make it 40gb about to store system files.
+    home , flag /home and make it the majority of the disk to allow for userspace files
+    recovery/backup , should be also considered for backing up system files on update failures and to allow the sys to recover from bricking.
+    swap , flag linux swap = 8gb if more than 8gb ram installed on system
+
+    *If dual booting, check to make sure you can boot into grub from uefi and allow Windows Boot MGMR / Distro Selection from one menu*
+
+Display:
+
+    Open system settings -> display -> set refresh rate to max
+
+
+Software Install:
+    sudo pacman -S neofetch yay alacritty fish code discord gparted libreoffice cmake htop neovim latte-dock
+
+    spotify firefox kvantum timeshift githubdesktop lsd bat
+
+Git repo stuff:
+    gitlab dwt1:
+
+        wallpaper clone
+        colorscripts install
+
+        follow install and add wallpapers to wallpaper in KDE
+
+Terminal Customization:
+    justin/.config/alacritty/alacritty.yml
+
+
+
+Shell Customization:
+
+    Fish:
+        justin/.config/fish/config.fish
+
+    Fish:
+        justin/.config/fish/functions/fish_prompt.fish
+
+
+Text Editor Customization:
+
+    Kate:
+        Open kate -> settings -> themes
+
+    Neovim:
+        /home/justin/.config/nvim/
+
+        mkdir plugged
+        touch init.vim
+        edit init.vim s
+        install vim plug on github
+
+Latte-Dock and Panel Customization:
+
+    Top Panel:
+        Black top bar -> Application Menu -> Global Menu -> Spacer -> Event Calender -> Ram Usage
+        ->Cpu Usage -> Netspeed Widget -> KDE System Tray
+
+    Latte Panel:
+
+        Better to make it yourself. Usually dodge fullscreen and set reappear to be 0ms
+        put Fish App instead of alacritty. chsh -s 'which fish' can cause bugs if apps assume bash to be default shell
+
+
+System Customization:
+    Kvantum themes from KDEstore.com
+    download and extract into downloads/kvantum/
+    open kvantum manager and select theme and install
+
+    application style : Kvantum
+    rest : download theme to mathc kvantum
+
+    Window Decorations -> set window border size to "very large"
+
+
+Uninstall:
+
+    Usually Konsole and Yakuake?
+
+
